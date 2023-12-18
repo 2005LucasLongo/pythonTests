@@ -13,7 +13,7 @@ import openpyxl
 import pyperclip
 from time import sleep
 
-workbook = openpyxl.load_workbook('produtos_ficticios.xlsx')
+workbook = openpyxl.load_workbook('AutomacaoContabilidade\produtos.xlsx')
 sheet_produtos = workbook['Produtos']
 
 for linha in sheet_produtos.iter_rows(min_row=2):
@@ -129,4 +129,4 @@ for linha in sheet_produtos.iter_rows(min_row=2):
     pyautogui.press('enter')
     sleep(5)
 
-print('Cadastro de produtos da planilha concluídos com sucesso.')
+print('Cadastro dos produtos da planilha concluído com sucesso.')
