@@ -19,7 +19,7 @@ sheet_produtos = workbook['Produtos']
 for linha in sheet_produtos.iter_rows(min_row=2):
     nome_produto = linha[0].value
     pyperclip.copy(nome_produto)
-    pyautogui.click(852,187, duration=1)
+    pyautogui.leftClick(926,194, duration=1)
     pyautogui.hotkey('ctrl', 'v')
 
     descricao = linha[1].value
@@ -49,7 +49,7 @@ for linha in sheet_produtos.iter_rows(min_row=2):
 
     pyautogui.press('tab')
     pyautogui.press('enter')
-    sleep(5)
+    sleep(10)
 
     preco = linha[6].value
     pyperclip.copy(preco)
@@ -92,7 +92,7 @@ for linha in sheet_produtos.iter_rows(min_row=2):
 
     pyautogui.press('tab')
     pyautogui.press('enter')
-    sleep(5)
+    sleep(10)
 
     fabricante = linha[12].value
     pyperclip.copy(fabricante)
@@ -125,8 +125,7 @@ for linha in sheet_produtos.iter_rows(min_row=2):
     sleep(5)
     pyautogui.press('enter')
 
-    pyautogui.press('tab')
-    pyautogui.press('enter')
+    pyautogui.leftClick(1027,463,duration=1)
     sleep(5)
 
 print('Cadastro dos produtos da planilha concluído com sucesso.')
